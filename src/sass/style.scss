@@ -1,3 +1,28 @@
+@import 'base/mixins';
+
 * {
     font-family: 'Gilroy', sans-serif;
+    margin: 0;
+    padding: 0;
+    color: #fff;
 }
+
+a {
+    text-decoration: none;
+    transition: all 0.3s;
+    &:hover {
+        transform: scale(1.06);
+    }
+}
+
+.container {
+    width: 1720px;
+    margin: 0 auto;
+
+}
+
+@import 'blocks/header';
+@import 'blocks/btn';
+@import 'blocks/promo';
+@import 'blocks/services';
+
