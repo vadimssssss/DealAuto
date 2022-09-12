@@ -13,13 +13,20 @@
         row-gap: 50px;
     }
     &__item {
+        overflow: hidden;
+        position: relative;
         border: 1px solid #FFFFFF;
         border-radius: 5px;
-        height: 700px;
-        transition: all .3s;
+        &-elem {
+            margin-top: auto;
+            position: absolute;
+            bottom: 45px;
+
+        }
         &-descr {
             margin-top: 24px;
             padding: 0 40px;
+            margin-bottom: 205px;
         }
         &-title {
             font-weight: 600;
@@ -31,11 +38,8 @@
             font-weight: 500;
             font-size: 22px;
             line-height: 26px;
-            height: 78px;
-            overflow-x: scroll;
         }
         &-price {
-            margin-top: 25px;
             font-weight: 700;
             font-size: 38px;
             line-height: 46px;
@@ -44,12 +48,19 @@
         .btn {
             margin-top: 28px;
             height: 60px;
-            width: 100%;
+            width: 437px;
+            font-weight: 600;
+            font-size: 22px;
+            line-height: 26px;
         }
         &:hover {
             .services__item-price {
                 transform: translate(5%);
             }
+        }
+        img {
+            width: calc(100% + 1px);
+            object-fit: cover;
         }
     }
 }

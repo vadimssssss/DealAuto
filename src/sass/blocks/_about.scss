@@ -1,5 +1,4 @@
 .about {
-    position: relative;
     background: url(../img/bg/about/about-bg.jpg) center (center/cover) no-repeat;
     min-height: 568px;
     &__text {
@@ -11,9 +10,7 @@
         line-height: 60px;
     }
     &__descr {
-        position: absolute;
-        top: 50%;
-        transform: translateY(-50%);
+        margin-top: 50px;
         font-weight: 400;
         font-size: 32px;
         line-height: 37px;  

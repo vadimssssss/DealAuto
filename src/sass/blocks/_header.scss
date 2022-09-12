@@ -1,9 +1,10 @@
 .header {
-    display: flex;
-    justify-content: space-between;
-    padding: 0 100px;
     height: 90px;
     background-color: rgba(0, 0, 0, 0);
+    .container {
+        display: flex;
+        justify-content: space-between;
+    }
     &__links {
         display: flex;
         justify-content: space-between;

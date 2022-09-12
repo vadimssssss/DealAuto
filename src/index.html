@@ -12,38 +12,40 @@
 
 
     <header class="header">
-        <ul class="header__links">
-            <a href="#">
-                <li class="header__link">О нас</li>
-            </a>
-            <a href="#">
-                <li class="header__link">Услуги</li>
-            </a>
-            <a href="#">
-                <li class="header__link">Подобранные авто</li>
-            </a>
-            <a href="#">
-                <li class="header__link">Наша команда</li>
-            </a>
-            <a href="#">
-                <li class="header__link">Контакты</li>
-            </a>
-        </ul>
-
-        <a href="#">
-            <div class="header__logo">
-                <img src="icons/main-logo.svg" alt="main logo">
-                <div class="header__logo-text"><span>Диал</span>Авто</div>
-            </div>
-        </a>
-
-        <div class="header__info">
-            <div class="header__contacts">
-                <a href="tel:+79326154809">+7-932-615-48-09</a>
-                <a href="mailto:info25@gmail.com">info25@gmail.com</a>
-            </div>
+        <div class="container">
+            <ul class="header__links">
+                <a href="#">
+                    <li class="header__link">О нас</li>
+                </a>
+                <a href="#">
+                    <li class="header__link">Услуги</li>
+                </a>
+                <a href="#">
+                    <li class="header__link">Подобранные авто</li>
+                </a>
+                <a href="#">
+                    <li class="header__link">Наша команда</li>
+                </a>
+                <a href="#">
+                    <li class="header__link">Контакты</li>
+                </a>
+            </ul>
     
-            <button class="btn">Заказать звонок</button>
+            <a href="#">
+                <div class="header__logo">
+                    <img src="icons/main-logo.svg" alt="main logo">
+                    <div class="header__logo-text"><span>Диал</span>Авто</div>
+                </div>
+            </a>
+    
+            <div class="header__info">
+                <div class="header__contacts">
+                    <a href="tel:+79326154809">+7-932-615-48-09</a>
+                    <a href="mailto:info25@gmail.com">info25@gmail.com</a>
+                </div>
+        
+                <button class="btn">Заказать звонок</button>
+            </div>
         </div>
     </header>
 
@@ -67,8 +69,10 @@
                     <div class="services__item-descr">
                         <div class="services__item-title">Подбор автомобиля под ключ</div>
                         <div class="services__item-text">Отберем лучшие предложения на рынке, проверим все документы и проведем полную диагностику машины.</div>
-                        <div class="services__item-price">15 000 ₽</div>
-                        <button class="btn">Оставить заявку</button>
+                        <div class="services__item-elem">
+                            <div class="services__item-price">15 000 ₽</div>
+                            <button class="btn">Оставить заявку</button>
+                        </div>
                     </div>
                 </div>
 
@@ -77,8 +81,10 @@
                     <div class="services__item-descr">
                         <div class="services__item-title">Выездная диагностика</div>
                         <div class="services__item-text">Проведем диагностику  и проверим историю выбранного вами автомобиля.</div>
-                        <div class="services__item-price">4000 ₽</div>
-                        <button class="btn">Оставить заявку</button>
+                        <div class="services__item-elem">
+                            <div class="services__item-price">4000 ₽</div>
+                            <button class="btn">Оставить заявку</button>
+                        </div>
                     </div>
                 </div>
 
@@ -87,8 +93,10 @@
                     <div class="services__item-descr">
                         <div class="services__item-title">Специалист на день</div>
                         <div class="services__item-text">Проверим до 5-ти выбранных вами автомобилей за один день.</div>
-                        <div class="services__item-price">7000 ₽</div>
-                        <button class="btn">Оставить заявку</button>
+                        <div class="services__item-elem">
+                            <div class="services__item-price">7000 ₽</div>
+                            <button class="btn">Оставить заявку</button>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -166,7 +174,7 @@
                     <div class="contacts__address">
                         <div class="contacts__address-title">Адрес</div>
                         <div class="contacts__address-link">
-                            <a href="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2238.026820227321!2d37.56066771593547!3d55.87954938058738!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x46b5376fd2a300eb%3A0x676eceeadea8744a!2zVWxpdHNhIDgwMC1MZXRpeWEgTW9za3Z5LCAyOCDQutC-0YDQv9GD0YEgMSwgMTIwLCBNb3NrdmEsIDEyNzU5MQ!5e0!3m2!1sen!2sru!4v1662982625214!5m2!1sen!2sru">г. Москва 800-летие Москвы 28 к.1 оф. 120</a>
+                            <a href="">г. Москва 800-летие Москвы 28 к.1 оф. 120</a>
                         </div>
                     </div>
 
@@ -195,14 +203,67 @@
                         </div>
                     </div>
 
-                    <div class="contacts__feedback">
-                        <div class="contacts__feedback-title">Остались вопросы? Напишите нам!</div>
-                        <form action=""></form>
-                    </div>
+                    
+                </div>
+                <div class="contacts__feedback">
+                    <div class="contacts__feedback-title">Остались вопросы? Напишите нам!</div>
+                    <form action="#" class="contacts__feedback-form">
+                        <div class="contacts__feedback-input">
+                            <input type="text" name="name" id="name" required>
+                            <label for="name">Ваше имя</label>
+                        </div>
+
+                        <div class="contacts__feedback-input">
+                            <input type="tel" id="phone" name="phone"required>
+                            <label for="phone">Ваш номер</label>
+                        </div>
+
+                        <div class="contacts__feedback-input contacts__feedback-input_email">
+                            <input type="email" id="email" name="email" required>
+                            <label for="email">E-mail</label>
+                        </div>
+
+                        <div class="contacts__feedback-textarea" required>
+                            <textarea name="text" id="text"></textarea>
+                            <label for="text">Ваш вопрос в свободной форме</label>
+                        </div>
+
+                        <button class="btn contacts__feedback-btn">Отправить сообщение</button>
+                    </form>
                 </div>
             </div>
         </div>
     </section>
+
+    <footer class="footer">
+        <div class="container">
+            <div class="footer__wrapper">
+                <div class="footer__info">
+                    <div class="footer__logo">
+                        <a href="#"><span>Диал</span>Авто</a>
+                    </div>
+                    <ul class="footer__links">
+                        <li><a href="#">О нас</a></li>
+                        <li><a href="#">Услуги</a></li>
+                        <li><a href="#">Подобранные авто</a></li>
+                        <li><a href="#">Наша команда</a></li>
+                        <li><a href="#">Контакты</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer__sign">
+                    <div class="footer__text">Подпишитесь на нашу рассылку, чтобы первыми узнавать о новых предложениях!</div>
+                    <form action="#" class="footer__form">
+                        <div class="footer__input">
+                            <input type="email" id="email" name="email" required>
+                            <label for="email">Ваша почта</label>
+                        </div>
+                        <button class="btn">Подписаться</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </footer>
 
 </body>
 </html>
