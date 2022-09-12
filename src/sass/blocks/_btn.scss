@@ -9,9 +9,4 @@
     background-color: $main_color;
     cursor: pointer;
     transition: all 0.3s;
-    &:hover {
-        background-color: rgba(153, 3, 245, 0.85);
-        transform: scale(1.04);
-        box-shadow: 0 0 10px $main_color;
-    }
 }

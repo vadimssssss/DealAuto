@@ -1,14 +1,10 @@
 .promo {
-    top: -90px;
     height: calc(100vh - 90px);
     z-index: 2;
-    img {
-        position: absolute;
-        z-index: -1;
+    .bg-img {
         top: -90px;
         height: calc(100% + 90px);
-        width: 100%;
-        object-fit: cover;
+        
     }
     &__text {
         position: absolute;

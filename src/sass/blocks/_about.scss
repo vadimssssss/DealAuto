@@ -1,0 +1,22 @@
+.about {
+    position: relative;
+    background: url(../img/bg/about/about-bg.jpg) center (center/cover) no-repeat;
+    min-height: 568px;
+    &__text {
+        padding-top: 45px;
+    }
+    &__title {
+        font-weight: 600;
+        font-size: 50px;
+        line-height: 60px;
+    }
+    &__descr {
+        position: absolute;
+        top: 50%;
+        transform: translateY(-50%);
+        font-weight: 400;
+        font-size: 32px;
+        line-height: 37px;  
+        width: 800px;
+    }
+}

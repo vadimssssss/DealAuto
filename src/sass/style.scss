@@ -10,9 +10,6 @@
 a {
     text-decoration: none;
     transition: all 0.3s;
-    &:hover {
-        transform: scale(1.06);
-    }
 }
 
 .container {
@@ -23,6 +20,11 @@ a {
 
 @import 'blocks/header';
 @import 'blocks/btn';
+@import 'blocks/bg';
 @import 'blocks/promo';
 @import 'blocks/services';
+@import 'blocks/about';
+@import 'blocks/rewiew';
+@import 'blocks/team';
+
 
