@@ -35,6 +35,14 @@
             transform: scale(0.8);
         }
     }
+    .team {
+        &__wrapper {
+            gap: 0;
+        }
+        &__item {
+            transform: scale(0.7);
+        }
+    }
     .contacts {
         &__feedback {
             &-form {
@@ -105,14 +113,6 @@
         &__descr {
             font-size: 20px;
             width: 550px;
-        }
-    }
-    .team {
-        &__wrapper {
-            gap: 0;
-        }
-        &__item {
-            transform: scale(0.7);
         }
     }
     .contacts {
