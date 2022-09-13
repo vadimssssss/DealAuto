@@ -9,8 +9,9 @@
     &__wrapper {
         margin-top: 50px;
         display: grid;
-        grid-template-columns: repeat(3, 500px);
-        justify-content: space-between;
+        grid-template-columns: repeat(auto-fit, 500px);
+        gap: 50px;
+        justify-content: space-around;
     }
     &__item {
         border: 1px solid #FFFFFF;

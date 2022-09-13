@@ -1,6 +1,5 @@
 .about {
     background: url(../img/bg/about/about-bg.jpg) center (center/cover) no-repeat;
-    min-height: 568px;
     &__text {
         padding-top: 45px;
     }
@@ -15,5 +14,6 @@
         font-size: 32px;
         line-height: 37px;  
         width: 800px;
+        padding-bottom: 10%;
     }
 }

@@ -8,9 +8,10 @@
     &__wrapper {
         margin-top: 50px;
         display: grid;
-        grid-template-columns: repeat(3, 510px);
-        justify-content: space-between;
+        grid-template-columns: repeat(auto-fit, minmax(auto, 510px));
+        justify-content: space-around;
         row-gap: 50px;
+        column-gap: 20px;
     }
     &__item {
         overflow: hidden;

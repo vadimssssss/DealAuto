@@ -1,0 +1,229 @@
+@media (max-width: 1600px) {
+    .header {
+        &__link {
+            font-size: 14px;
+            margin-right: 20px;
+        } 
+        &__logo {
+            &-text {
+                font-size: 28px;
+            }
+            img {
+                height: 70%;
+            }
+        }
+        &__contacts {
+            a {
+                font-size: 14px;
+                line-height: 14px;
+            }
+        }
+    }
+    .about {
+        &__descr {
+            margin-top: 80px;
+            font-weight: 400;
+            font-size: 26px;
+            line-height: 32px;
+        }
+    }
+    .services {
+        &__wrapper {
+            gap: 0;
+        }
+        &__item {
+            transform: scale(0.8);
+        }
+    }
+    .contacts {
+        &__feedback {
+            &-form {
+                padding: 30px 40px;
+            }
+        }
+        &__link {
+            font-size: 20px;
+            margin-top: 10px;
+        }
+        &__social {
+            &-wrapper {
+                margin-top: 10px;
+            }
+        }
+    }
+    .footer {
+        &__logo {
+            margin-right: 60px;
+        }
+    }
+}
+
+@media (max-width: 1200px) {
+    .header {
+        &__link {
+            margin-right: 15px;
+            font-weight: 500;
+        } 
+        &__logo {
+            &-text {
+                font-size: 20px;
+            }
+            img {
+                height: 60%;
+            }
+        }
+        &__contacts {
+            margin-right: 10px;
+            a {
+                font-weight: 500;
+            }
+        }
+        .btn {
+            font-size: 12px;
+            padding: 0 20px;
+        }
+    }
+    .promo {
+        &__text {
+            max-width: 500px;
+        }
+        &__title {
+            font-size: 35px;
+            line-height: 45px;
+        }
+        .btn {
+            height: 45px;
+            font-size: 16px;
+        }
+    }
+    .services {
+        &__wrapper {
+            margin-top: 0;
+        }
+    }
+    .about {
+        &__descr {
+            font-size: 20px;
+            width: 550px;
+        }
+    }
+    .team {
+        &__wrapper {
+            gap: 0;
+        }
+        &__item {
+            transform: scale(0.7);
+        }
+    }
+    .contacts {
+        &__feedback {
+            &-title {
+                max-width: 308px;
+                font-size: 30px;
+            }
+            &-form {
+                grid-template-columns: 308px;
+            }
+            &-textarea {
+                grid-column: unset;
+                grid-row: 3/5;
+            }
+            &-input {
+                &_email {
+                    grid-column: unset;
+                    width: auto;
+                }
+            }
+            &-btn {
+                grid-column: unset;
+                width: auto;
+                font-size: 14px;
+                width: 100%;
+            }
+            label {
+                top: -10px;
+                font-size: 16px;
+            }
+        }
+    }
+    .footer {
+        &__links {
+            font-size: 18px;
+            line-height: 22px;
+        }
+        &__text {
+            width: 400px;
+            font-size: 18px;
+            line-height: 22px;
+        }
+        &__form {
+            grid-template: 50px / 400px;
+            row-gap: 20px;
+            justify-content: end;
+            label {
+                top: -10px;
+                font-size: 16px;
+            }
+        }
+    }
+}
+
+@media (max-width: 992px) {
+    .header {
+        &__links {
+            display: none;
+        }
+        .btn {
+            height: 35px;
+            padding: 0 40px;
+        }
+    }
+    .promo {
+        &__text {
+            max-width: 420px;
+        }
+        &__title {
+            font-size: 30px;
+            line-height: 40px;
+        }
+        .btn {
+            font-size: 14px;
+            padding: 0 60px;
+        }
+    }
+    .contacts {
+        &__link {
+            font-size: 16px;
+        }
+        &__address-title, &__phone-title, &__social-title, &__feedback-title {
+            font-size: 25px;
+        }
+    }
+    .footer {
+        &__logo {
+            font-size: 30px;
+        }
+        &__links {
+            margin-top: 10px;
+            font-size: 16px;
+            line-height: 16px;
+        }
+        &__text {
+            width: 300px;
+        }
+        &__form {
+            grid-template: 50px / 300px;
+        }
+        .btn {
+            font-size: 16px;
+        }
+    }
+}
+
+// @media (max-width: 768px) {
+
+// }
+
+// @media (max-width: 576px) {
+
+// }

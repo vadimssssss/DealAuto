@@ -9,7 +9,7 @@
     &__wrapper {
         margin-top: 50px;
         display: grid;
-        grid-template: repeat(2, 400px) / repeat(3, 570px);
+        grid-template: repeat(2, auto) / repeat(3, minmax(auto, 570px));
         grid-auto-rows: auto;
     }
     img {
