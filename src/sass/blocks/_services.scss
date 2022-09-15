@@ -1,33 +1,29 @@
 .services {
     background-color: $bg_color;
     padding: 100px 0;
-    &__title {
-        font-weight: 600;
-        font-size: 50px;
-    }
     &__wrapper {
         margin-top: 50px;
         display: grid;
-        grid-template-columns: repeat(auto-fit, minmax(auto, 510px));
+        grid-template-columns: repeat(auto-fit, minmax(310px, 30%));
         justify-content: space-around;
         row-gap: 50px;
         column-gap: 20px;
     }
     &__item {
+        box-sizing: content-box;
         overflow: hidden;
-        position: relative;
         border: 1px solid #FFFFFF;
         border-radius: 5px;
-        &-elem {
-            margin-top: auto;
-            position: absolute;
-            bottom: 45px;
-
-        }
-        &-descr {
-            margin-top: 24px;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        transition: border .1s, transform .3s;
+        &-descr, &-elem {
+            margin-top: 25px;
             padding: 0 40px;
-            margin-bottom: 205px;
+        }
+        &-elem {
+            padding-bottom: 45px; 
         }
         &-title {
             font-weight: 600;
@@ -49,19 +45,20 @@
         .btn {
             margin-top: 28px;
             height: 60px;
-            width: 437px;
+            width: 100%;
             font-weight: 600;
             font-size: 22px;
             line-height: 26px;
         }
-        &:hover {
-            .services__item-price {
-                transform: translate(5%);
-            }
-        }
         img {
-            width: calc(100% + 1px);
+            position: relative;
+            left: -2px;
+            width: calc(100% + 3px);
             object-fit: cover;
+        }
+        &:hover {
+            border: 2px solid $main_color;
+            transform: scale(1.02);
         }
     }
 }

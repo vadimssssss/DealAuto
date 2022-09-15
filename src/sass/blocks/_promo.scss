@@ -9,15 +9,9 @@
     .bg-img {
         top: -90px;
         height: calc(100% + 90px);
-        
     }
     &__text {
         max-width: 700px;
-    }
-    &__title {
-        font-weight: 600;
-        font-size: 50px;
-        line-height: 60px;
     }
     .btn {
         padding: 0 80px;
@@ -25,4 +19,7 @@
         font-size: 22px;
         margin-top: 57px;
     }
+}
+.menu {
+    display: none;
 }

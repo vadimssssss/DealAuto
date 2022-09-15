@@ -16,6 +16,9 @@
         span {
             color: $main_color;
         }
+        img {
+            display: none;
+        }
     }
     &__links {
         list-style-type: none;
