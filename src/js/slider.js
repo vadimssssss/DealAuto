@@ -37,6 +37,7 @@ slidePrev.addEventListener('click', () => {
     } else {
         offset -= +width.slice(0, width.length - 2);
     }
+    if(pagOffset == )
     slidesInner.style.transform = `translateX(-${offset}px)`;
-    sliderPagLine.style.transform = `translateX(-${pagOffset / 2}px)`;
+    sliderPagLine.style.transform = `translateX(-${pagOffset}px)`;
 });
