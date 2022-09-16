@@ -1,5 +1,5 @@
 .promo {
-    height: calc(100vh - 90px);
+    height: 100vh;
     z-index: 2;
     .container {
         height: 100%;
@@ -7,8 +7,7 @@
         align-items: center;
     }
     .bg-img {
-        top: -90px;
-        height: calc(100% + 90px);
+        height: 100%;
     }
     &__text {
         max-width: 700px;
