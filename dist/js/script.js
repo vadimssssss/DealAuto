@@ -10,28 +10,60 @@
 //     variableWidth: true
 // });
 
-const hamburger = document.querySelector('.hamburger'),
-      menu = document.querySelector('.menu'),
-      header = document.querySelector('.header');
-let scrollTop = window.pageYOffset;
 
-hamburger.addEventListener('click', () => {
-    hamburger.classList.toggle('hamburger__active');
-    menu.classList.toggle('menu__active');
-    header.classList.toggle('header__fixed');
-    if (hamburger.classList.contains('.humburger__active')) {
-        const disableScroll = function() {
-            hamburger.addEventListener ('click', () => {
-                removeEventListener('scroll', window);
-            });
-        };
-    } else {
-        window.addEventListener('scroll', () => {
-            window.scrollTo(0, scrollTop);
-        });
-    }
-});
 
+document.addEventListener('DOMContentLoaded', () => {
+    const body = document.querySelector('body')
+
+
+    const hamburger = document.querySelector('.hamburger'),
+        menu = document.querySelector('.menu')
+
+    hamburger.addEventListener('click', () => {
+        hamburger.classList.toggle('hamburger__active');
+        menu.classList.toggle('menu__active');
+        if (menu.classList.contains('menu__active')) {
+            body.style.overflow = 'hidden';
+        } else {
+            body.style.overflow = '';
+        }
+    });
+
+
+    const reviews_swiper = new Swiper('.js-reviews-swiper', {
+        scrollbar: {
+            el: '.swiper-scrollbar',
+            draggable: true,
+        },
+        slidesPerView: 3,
+        navigation: {
+            nextEl: '.js-review-next',
+            prevEl: '.js-review-prev',
+        },
+        breakpoints: {
+            // when window width is >= 320px
+            320: {
+                slidesPerView: 1,
+                spaceBetween: 20
+            },
+            // when window width is >= 480px
+            480: {
+                slidesPerView: 1,
+                spaceBetween: 30
+            },
+            // when window width is >= 640px
+            640: {
+                slidesPerView: 2,
+                spaceBetween: 20
+            },
+            993: {
+                slidesPerView: 3,
+                spaceBetween: 0
+            }
+        }
+    });
+
+})
 
 // window.addEventListener('scroll', () => {
 //     console.log(window.pageYOffset);
