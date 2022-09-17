@@ -28,6 +28,7 @@
         position: relative;
         margin-top: 50px; 
         .arrow {
+            outline: none;
             cursor: pointer;
             position: absolute;
             top: 50%;
@@ -40,19 +41,7 @@
             }
         }
     }
-    &__arrows {
-        display: flex;
-        width: 100%;
-        justify-content: end;
-        &-img {
-            height: 50px;
-            &:last-child {
-                margin-left: 10vw;
-            }
-        }
-    }
     &__wrapper {
-        
         display: flex;
         align-items: center;
         align-items: stretch;
@@ -95,7 +84,7 @@
         }
         &-value {
             margin-top: 15px;
-            font-weight: 600;
+            font-weight: 400;
             @include adaptiv-font(24, 18);
             line-height: 29px;
         }
