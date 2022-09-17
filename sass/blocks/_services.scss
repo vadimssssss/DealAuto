@@ -1,0 +1,84 @@
+.services {
+    background-color: $bg_color;
+    padding: 100px 0;
+    &__wrapper {
+        margin-top: 50px;
+        display: grid;
+        grid-template-columns: repeat(3, minmax(310px, 30%));
+        justify-content: space-around;
+        row-gap: 50px;
+        column-gap: 20px;
+    }
+    &__item {
+        position: relative;
+        z-index: 1;
+        box-sizing: content-box;
+        overflow: hidden;
+        border: 1px solid #FFFFFF;
+        border-radius: 5px;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        background: rgba(#000000, 0);
+        transition: border .1s, transform .3s;
+        &-descr, &-elem {
+            margin-top: 25px;
+            padding: 0 40px;
+        }
+        &-elem {
+            padding-bottom: 45px; 
+        }
+        &-title {
+            font-weight: 600;
+            font-size: 30px;
+            line-height: 36px;
+        }
+        &-text {
+            margin-top: 11px;
+            font-weight: 500;
+            font-size: 22px;
+            line-height: 26px;
+        }
+        &-price {
+            font-weight: 700;
+            font-size: 38px;
+            line-height: 46px;
+            transition: all 1s;
+        }
+        .btn {
+            margin-top: 28px;
+            height: 60px;
+            width: 100%;
+            font-weight: 600;
+            font-size: 22px;
+            line-height: 26px;
+        }
+        &-wrapper {
+            display: flex;
+            flex-direction: column;
+            .bg {
+                transform: skewY(-10deg);
+                position: absolute;
+                width: 100%;
+                top: -50px;
+                height: 41%;
+                z-index: -20;
+                display: block;
+                background: #AA7CC7;
+                border: 1px solid #FFFFFF;
+                border-radius: 5px;
+            }
+        }
+        .cars {
+            position: relative;
+            top: 10px;
+            width: 80%;
+            object-fit: cover;
+            align-self: flex-end;
+        }
+        &:hover {
+            border: 1px solid $main_color;
+            transform: scale(1.01);
+        }
+    }
+}

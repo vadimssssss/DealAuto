@@ -1,0 +1,52 @@
+@import 'libs/swiper.scss';
+@import 'base/mixins';
+
+
+* {
+    font-family: 'Gilroy', sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    color: #fff;
+}
+
+a {
+    text-decoration: none;
+    position: relative;
+    &::after {
+        content: '';
+        display: block;
+        position: absolute;
+        bottom: 0px;
+        width: 0;
+        height: 1px;
+        background-color: #fff;
+        left: 0;
+    }
+    &:hover::after {
+        width: 100%;
+        transition: width 0.3s ease-out;
+    }
+}
+
+.container {
+    max-width: 1720px;
+    width: 92vw;
+    margin: 0 auto;
+}
+
+@import 'blocks/title';
+@import 'blocks/header';
+@import 'blocks/btn';
+@import 'blocks/bg';
+@import 'blocks/promo';
+@import 'blocks/services';
+@import 'blocks/about';
+@import 'blocks/rewiew';
+@import 'blocks/team';
+@import 'blocks/contacts';
+@import 'blocks/footer';
+
+@import 'base/media';
+
+
