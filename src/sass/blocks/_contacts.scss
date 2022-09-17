@@ -42,6 +42,9 @@
             align-items: center;
             a {
                 margin-right: 30px;
+                &::after {
+                    display: none;
+                }
             }
         }
     }

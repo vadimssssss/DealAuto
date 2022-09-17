@@ -19,6 +19,9 @@
         img {
             display: none;
         }
+        a::after {
+            display: none;
+        }
     }
     &__links {
         list-style-type: none;

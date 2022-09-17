@@ -12,6 +12,21 @@
 
 a {
     text-decoration: none;
+    position: relative;
+    &::after {
+        content: '';
+        display: block;
+        position: absolute;
+        bottom: 0px;
+        width: 0;
+        height: 1px;
+        background-color: #fff;
+        left: 0;
+    }
+    &:hover::after {
+        width: 100%;
+        transition: width 0.3s ease-out;
+    }
 }
 
 .container {

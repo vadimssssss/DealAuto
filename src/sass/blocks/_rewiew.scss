@@ -56,8 +56,6 @@
         display: flex;
         align-items: center;
         align-items: stretch;
-
-
         .swiper-slide {
             height: auto;
         }
@@ -92,13 +90,13 @@
         }
         &-title {
             font-weight: 600;
-            font-size: 30px;
+            @include adaptiv-font(30, 25);
             line-height: 36px;
         }
         &-value {
             margin-top: 15px;
             font-weight: 600;
-            font-size: 24px;
+            @include adaptiv-font(24, 18);
             line-height: 29px;
         }
         &:hover {
@@ -194,7 +192,6 @@
             }
             &-title {
                 font-weight: 600;
-                font-size: 24px;
                 line-height: 36px;
             }
             &-value {

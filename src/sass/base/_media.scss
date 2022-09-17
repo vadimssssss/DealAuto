@@ -27,6 +27,16 @@
             line-height: 32px;
         }
     }
+    .rewiew {
+        &__item {
+            &-content {
+                padding: 15px;
+            }
+            &-value {
+                margin-top: 5px;
+            }
+        }
+    }
     .services {
         &__item {
             &-descr, &-elem {
@@ -114,12 +124,11 @@
         }
     }
     .title {
-        font-size: 35px;
         line-height: 45px;
     }
     .services {
         &__wrapper {
-            grid-template-columns: repeat(2, minmax(310px, 40%));
+            grid-template-columns: repeat(2, minmax(310px, 47%));
         }
     }
     .promo {
@@ -138,7 +147,7 @@
     }
     .team {
         &__wrapper {
-            grid-template-columns: repeat(2, minmax(310px, 40%));
+            grid-template-columns: repeat(2, minmax(310px, 47%));
         }
     }
     .contacts {
@@ -274,7 +283,7 @@
         display: flex;
         flex-direction: column;
         justify-content: space-around;
-        left: -100%;
+        top: -100%;
         transition: all .3s;
         &__links {
             margin-top: 20px;
@@ -299,13 +308,18 @@
             display: flex;
             align-items: center;
             justify-content: space-around;
+            a::after {
+                display: none;
+            }
         }
         &__active {
+            top: 50px;
             left: 0;
+            right: 0;
+            bottom: 0;
         }
     }
     .title {
-        font-size: 30px;
         line-height: 40px;
     }
     .promo {
@@ -459,7 +473,6 @@
     }
     .title {
         font-weight: 600;
-        font-size: 30px;
         line-height: 36px;
     }
     .promo {

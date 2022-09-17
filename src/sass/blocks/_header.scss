@@ -1,10 +1,13 @@
 .header {
-    z-index: 20;
+    z-index: 30;
     height: 90px;
     width: 100vw;
     position: fixed;
-    background-color: rgba(0, 0, 0, 0.5);
-    box-shadow: 0 0 30px #000;
+    transition: all 0.3s;
+    &__active {
+        background-color: rgba(0, 0, 0, 0.75);
+        box-shadow: 0 10px 30px #000;
+    }
     .container {
         height: 100%;
         display: flex;
@@ -42,6 +45,12 @@
                 color: $main_color;
             }
         }
+        &-link {
+            &::after {
+                display: none;
+            }
+        }
+        
     }
     &__info {
         display: flex;
