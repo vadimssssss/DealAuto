@@ -121,7 +121,7 @@
                     </div>
                     <div class="services__item-elem">
                         <div class="services__item-price">15 000 ₽</div>
-                        <button class="btn">Оставить заявку</button>
+                        <button class="btn" id="callModal">Оставить заявку</button>
                     </div>
                 </div>
                 <div class="services__item">
@@ -135,7 +135,7 @@
                     </div>
                     <div class="services__item-elem">
                         <div class="services__item-price">4000 ₽</div>
-                        <button class="btn">Оставить заявку</button>
+                        <button class="btn" id="callModal">Оставить заявку</button>
                     </div>
                 </div>
                 <div class="services__item">
@@ -149,7 +149,7 @@
                     </div>
                     <div class="services__item-elem">
                         <div class="services__item-price">7000 ₽</div>
-                        <button class="btn">Оставить заявку</button>
+                        <button class="btn" id="callModal">Оставить заявку</button>
                     </div>
                 </div>
             </div>
@@ -562,6 +562,40 @@
             </div>
         </div>
     </footer>
+
+
+    <div class="overlay">
+        <section class="modal">
+            <div class="modal__close">
+                <span></span>
+                <span></span>
+            </div>
+            <form action="#" class="modal__form">
+                <div class="modal__input">
+                    <input type="text" name="name" id="name" required>
+                    <label for="name">Ваше имя</label>
+                </div>
+    
+                <div class="modal__input">
+                    <input type="tel" id="phone" name="phone"required>
+                    <label for="phone">Ваш номер</label>
+                </div>
+    
+                <div class="modal__input">
+                    <input type="email" id="email" name="email" required>
+                    <label for="email">E-mail</label>
+                </div>
+    
+                <div class="modal__textarea" required>
+                    <textarea name="text" id="text"></textarea>
+                    <label for="text">Ваш вопрос в свободной форме</label>
+                </div>
+    
+                <button class="btn modal__btn">Отправить сообщение</button>
+            </form>
+    </section>
+    </div>
+    
 
     
 </body>

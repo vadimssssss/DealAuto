@@ -1,15 +1,3 @@
-// $('.rewiew__slider').slick({
-//     dots: true,
-//     infinite: true,
-//     speed: 300,
-//     slidesToShow: 1,
-//     arrows: false,
-//     centerMode: true, 
-//     // centerPadding: '150px'
-//     mobileFirst: true,
-//     variableWidth: true
-// });
-
 const header = document.querySelector('.header');
 
 document.addEventListener('DOMContentLoaded', () => {
@@ -72,15 +60,27 @@ window.onscroll = function () {
     }
 };
 
-// window.addEventListener('scroll', () => {
-//     console.log(window.pageYOffset);
-// });
+const body = document.querySelector('body');
+const btns = document.querySelectorAll('#callModal');
+const modal = document.querySelector('.overlay');
+const closeBtn = document.querySelector('.modal__close');
 
-// function disableScroll() {
-//     let scrollTop = window.pageYOffset || document.documentElement.scrollTop;
+btns.forEach(function(btn) {
+    btn.addEventListener('click', function() {
+        modal.classList.add('overlay__active');
+        if (modal.classList.contains('overlay__active')) {
+            body.style.overflow = 'hidden';
+        } else {
+            body.style.overflow = '';
+        }
+    });
+});
 
-//         window.onscroll = function() {
-//             window.scrollTo(0, scrollTop);
-//         };
-// }
-// disableScroll();
+closeBtn.addEventListener('click', function() {
+    modal.classList.remove('overlay__active');
+    if (modal.classList.contains('overlay__active')) {
+        body.style.overflow = 'hidden';
+    } else {
+        body.style.overflow = '';
+    }
+});

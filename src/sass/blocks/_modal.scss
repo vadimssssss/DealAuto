@@ -1,0 +1,115 @@
+.overlay {
+    display: none;
+    &__active {
+        display: block;
+        position: fixed;
+        top: 0;
+        right: 0;
+        left: 0;
+        bottom: 0;
+        width: 100vw;
+        height: 100vh;
+        background: rgba(0, 0, 0, .8);
+        z-index: 100;
+    }
+}
+.modal {
+    border: 1px solid #FFFFFF;
+    position: absolute;
+    top: 50%;
+    transform: translate(-50%,-50%);
+    left: 50%;
+    width: 80%;
+    max-width: 800px;
+    background: $bg_color;
+    &__form {
+        padding: 30px 60px;
+        margin-top: 25px;
+        display: grid;
+        grid-template-columns: 100%;
+        grid-template-rows: repeat(6, 50px);
+        grid-auto-rows: 50px;
+        gap: 30px;
+        justify-content: space-between;
+    }
+    &__input {
+        position: relative;
+    }
+    &__textarea {
+        position: relative;
+        grid-row: 4 / 6;
+    }
+    input, textarea {
+        width: 100%;
+        height: 100%;
+        background-color: rgba(#000, 0);
+        border: 1px solid #FFFFFF;
+        padding: 0 25px;
+        @include adaptiv-font(22, 18);
+        resize: none;
+    }
+    label {
+        position: absolute;
+        top: -13px;
+        left: 10px;
+        padding: 0 15px;
+        background-color: $bg_color;
+        font-weight: 500;
+        @include adaptiv-font(20, 14);
+        color: rgba(255, 255, 255, 0.7);
+    }
+    textarea {
+        padding: 15px 25px;
+    }
+    &__close {
+        position: absolute;
+        right: 10px;
+        top: 10px;
+        height: 30px;
+        width: 30px;
+        display: block;
+        span {
+            position: absolute;
+            display: block;
+            width: 100%;
+            height: 3px;
+            top: 50%;
+            background-color: $main_color;
+            transform: translateY(-50%) rotate(45deg);
+            &:last-child {
+                transform: translateY(-50%) rotate(-45deg)
+            }
+        }
+    }
+    .btn {
+        @include adaptiv-font(18, 14);
+        height: 100%;
+    }
+}
+
+
+@media (max-width: 768px) {
+    .modal {
+        width: 90%;
+        &__form {
+            padding: 20px 25px;
+            margin-top: 30px;
+            grid-template-rows: repeat(6, 50px);
+            grid-auto-rows: 50px;
+            gap: 15px;
+        }
+        label {
+            padding: 0 5px;
+            top: -9px;
+            left: 5px;
+        }
+    }
+}
+@media (max-width: 1400px) {
+    .modal {
+        &__form {
+            grid-template-rows: repeat(6, 40px);
+            grid-auto-rows: 40px;
+        }
+    }
+}
