@@ -92,3 +92,11 @@ overlay.addEventListener('click', function() {
     overlay.classList.remove('overlay__active');
     stopScroll();
 });
+
+window.onkeydown = function(event) {
+    if (event.keyCode == 27) {
+        modal.classList.remove('modal__active');
+        overlay.classList.remove('overlay__active');
+        stopScroll();
+    }
+};
