@@ -564,37 +564,36 @@
     </footer>
 
 
-    <div class="overlay">
-        <section class="modal">
-            <div class="modal__close">
-                <span></span>
-                <span></span>
+    <div class="overlay"></div>
+    <section class="modal">
+        <div class="modal__close">
+            <span></span>
+            <span></span>
+        </div>
+        <form action="#" class="modal__form">
+            <div class="modal__input">
+                <input type="text" name="name" id="name" required>
+                <label for="name">Ваше имя</label>
             </div>
-            <form action="#" class="modal__form">
-                <div class="modal__input">
-                    <input type="text" name="name" id="name" required>
-                    <label for="name">Ваше имя</label>
-                </div>
-    
-                <div class="modal__input">
-                    <input type="tel" id="phone" name="phone"required>
-                    <label for="phone">Ваш номер</label>
-                </div>
-    
-                <div class="modal__input">
-                    <input type="email" id="email" name="email" required>
-                    <label for="email">E-mail</label>
-                </div>
-    
-                <div class="modal__textarea" required>
-                    <textarea name="text" id="text"></textarea>
-                    <label for="text">Ваш вопрос в свободной форме</label>
-                </div>
-    
-                <button class="btn modal__btn">Отправить сообщение</button>
-            </form>
-    </section>
-    </div>
+
+            <div class="modal__input">
+                <input type="tel" id="phone" name="phone"required>
+                <label for="phone">Ваш номер</label>
+            </div>
+
+            <div class="modal__input">
+                <input type="email" id="email" name="email" required>
+                <label for="email">E-mail</label>
+            </div>
+
+            <div class="modal__textarea" required>
+                <textarea name="text" id="text"></textarea>
+                <label for="text">Ваш вопрос в свободной форме</label>
+            </div>
+
+            <button class="btn modal__btn">Отправить сообщение</button>
+        </form>
+</section>
     
 
     

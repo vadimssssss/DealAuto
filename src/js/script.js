@@ -62,25 +62,33 @@ window.onscroll = function () {
 
 const body = document.querySelector('body');
 const btns = document.querySelectorAll('#callModal');
-const modal = document.querySelector('.overlay');
+const modal = document.querySelector('.modal');
 const closeBtn = document.querySelector('.modal__close');
-
-btns.forEach(function(btn) {
-    btn.addEventListener('click', function() {
-        modal.classList.add('overlay__active');
-        if (modal.classList.contains('overlay__active')) {
-            body.style.overflow = 'hidden';
-        } else {
-            body.style.overflow = '';
-        }
-    });
-});
-
-closeBtn.addEventListener('click', function() {
-    modal.classList.remove('overlay__active');
-    if (modal.classList.contains('overlay__active')) {
+const overlay = document.querySelector('.overlay');
+const stopScroll = function() {
+    if (modal.classList.contains('modal__active')) {
         body.style.overflow = 'hidden';
     } else {
         body.style.overflow = '';
     }
+};
+
+btns.forEach(function(btn) {
+    btn.addEventListener('click', function() {
+        overlay.classList.add('overlay__active');
+        modal.classList.add('modal__active');
+        stopScroll();
+    });
+});
+
+closeBtn.addEventListener('click', function() {
+    modal.classList.remove('modal__active');
+    overlay.classList.remove('overlay__active');
+    stopScroll();
+});
+
+overlay.addEventListener('click', function() {
+    modal.classList.remove('modal__active');
+    overlay.classList.remove('overlay__active');
+    stopScroll();
 });
