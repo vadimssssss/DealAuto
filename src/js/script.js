@@ -72,31 +72,34 @@ const stopScroll = function() {
         body.style.overflow = '';
     }
 };
+const closeModal = function() {
+    modal.classList.remove('modal__active');
+    overlay.classList.remove('overlay__active');
+    stopScroll();
+};
+const openModal = function() {
+    overlay.classList.add('overlay__active');
+    modal.classList.add('modal__active');
+    stopScroll();
+};
 
 btns.forEach(function(btn) {
     btn.addEventListener('click', function() {
-        overlay.classList.add('overlay__active');
-        modal.classList.add('modal__active');
-        stopScroll();
+        openModal();
     });
 });
 
 closeBtn.addEventListener('click', function() {
-    modal.classList.remove('modal__active');
-    overlay.classList.remove('overlay__active');
-    stopScroll();
+    closeModal();
 });
 
 overlay.addEventListener('click', function() {
-    modal.classList.remove('modal__active');
-    overlay.classList.remove('overlay__active');
-    stopScroll();
+    closeModal();
+    
 });
 
 window.onkeydown = function(event) {
     if (event.keyCode == 27) {
-        modal.classList.remove('modal__active');
-        overlay.classList.remove('overlay__active');
-        stopScroll();
+        closeModal();
     }
 };
