@@ -17,7 +17,7 @@ const hamburger = document.querySelector('.hamburger'),
     });
 
 
-    const reviews_swiper = new Swiper('.js-reviews-swiper', {
+    const reviewsSwiper = new Swiper('.js-reviews-swiper', {
         scrollbar: {
             el: '.swiper-scrollbar',
             draggable: true,
@@ -49,57 +49,87 @@ const hamburger = document.querySelector('.hamburger'),
             }
         }
     });
-
-});
-
-window.onscroll = function () {
-    if (window.pageYOffset > 0) {
-        header.classList.add('header__active');
-    } else {
-        header.classList.remove('header__active');
-    }
-};
-
-const body = document.querySelector('body');
-const btns = document.querySelectorAll('#callModal');
-const modal = document.querySelector('.modal');
-const closeBtn = document.querySelector('.modal__close');
-const overlay = document.querySelector('.overlay');
-const stopScroll = function() {
-    if (modal.classList.contains('modal__active')) {
-        body.style.overflow = 'hidden';
-    } else {
-        body.style.overflow = '';
-    }
-};
-const closeModal = function() {
-    modal.classList.remove('modal__active');
-    overlay.classList.remove('overlay__active');
-    stopScroll();
-};
-const openModal = function() {
-    overlay.classList.add('overlay__active');
-    modal.classList.add('modal__active');
-    stopScroll();
-};
-
-btns.forEach(function(btn) {
-    btn.addEventListener('click', function() {
-        openModal();
-    });
-});
-
-closeBtn.addEventListener('click', function() {
-    closeModal();
-});
-
-overlay.addEventListener('click', function() {
-    closeModal();
+    window.onscroll = function () {
+        if (window.pageYOffset > 0) {
+            header.classList.add('header__active');
+        } else {
+            header.classList.remove('header__active');
+        }
+    };
     
+    const btns = document.querySelectorAll('#callModal');
+    const modal = document.querySelector('.modal');
+    const closeBtn = document.querySelector('.modal__close');
+    const overlay = document.querySelector('.overlay');
+    const stopScroll = function() {
+        if (modal.classList.contains('modal__active')) {
+            body.style.overflow = 'hidden';
+        } else {
+            body.style.overflow = '';
+        }
+    };
+    const closeModal = function() {
+        modal.classList.remove('modal__active');
+        overlay.classList.remove('overlay__active');
+        stopScroll();
+    };
+    const openModal = function() {
+        overlay.classList.add('overlay__active');
+        modal.classList.add('modal__active');
+        stopScroll();
+    };
+    
+    btns.forEach(function(btn) {
+        btn.addEventListener('click', function() {
+            openModal();
+        });
+    });
+    
+    closeBtn.addEventListener('click', function() {
+        closeModal();
+    });
+    
+    overlay.addEventListener('click', function() {
+        closeModal();
+        
+    });
+    
+    window.onkeydown = function(event) {
+        if (event.keyCode == 27) {
+            closeModal();
+        }
+        if (event.keyCode == 39) {
+            reviewsSwiper.nextEl.onclick();
+        } 
+    };
+    
+
 });
 
-window.onkeydown = function(event) {
-    if (event.keyCode == 27) {
-        closeModal();
+const swiper = new Swiper(".mySwiper", {
+    loop: false,
+    spaceBetween: 10,
+    slidesPerView: 5,
+    freeMode: true,
+    watchSlidesProgress: true,
+    breakpoints: {
+        // when window width is >= 320px
+        320: {
+            slidesPerView: 3,
+        },
+        576: {
+            slidesPerView: 5
+        },
     }
-};
+  });
+  const swiper2 = new Swiper(".mySwiper2", {
+    loop: false,
+    spaceBetween: 100,
+    navigation: {
+      nextEl: ".js-info-next",
+      prevEl: ".js-info-prev",
+    },
+    thumbs: {
+      swiper: swiper,
+    },
+  });

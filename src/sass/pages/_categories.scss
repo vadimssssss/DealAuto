@@ -1,0 +1,22 @@
+.categories {
+    background-color: $bg_color;
+    padding-top: 120px;
+    &__way {
+        display: flex;
+        justify-content: start;
+        align-items: center;
+        opacity: 0.5;
+        li {
+            margin: 0 12px;
+            list-style-type: none;
+            font-weight: 600;
+            font-size: adaptiv-font(18, 14);
+            line-height: 21px;
+        }
+    }
+}
+@media (max-width: 576px) {
+    .categories {
+        display: none;
+    }
+}

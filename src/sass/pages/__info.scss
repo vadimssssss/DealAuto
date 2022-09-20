@@ -1,0 +1,175 @@
+.info {
+    background-color: $bg_color;
+    padding-top: 60px;
+    padding-bottom: 110px;
+    &__wrapper {
+        margin-top: 60px;
+        display: grid;
+        grid-template-columns: 55% 45%;
+    }
+    .swiper {
+        width: 90%;
+        height: 300px;
+        margin-left: auto;
+        margin-right: auto;
+        &-wrapper {
+            position: relative;
+        }
+        &-slide {
+            text-align: center;
+            background: #fff;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background-size: cover;
+            background-position: center;
+            img {
+                display: block;
+                width: 100%;
+                height: 100%;
+                object-fit: cover;
+            }
+        }
+    }
+    .arrow {
+        cursor: pointer;
+        outline: none;
+        z-index: 100;
+        position: absolute;
+        top: 50%;
+        transform: translateY(-50%);
+        &.prev_arrow {
+            left: -5%;
+        }
+        &.next_arrow {
+            right: -5%;
+        }
+    }
+    .slider {
+        &__wrapper {
+            overflow: hidden;
+        }
+    }
+    .mySwiper2 {
+        // overflow: hidden;
+        position: relative;
+        height: 65vh;
+    }
+    .mySwiper {
+        overflow: hidden;
+        height: 15vh;
+        padding: 10px 0;
+        .swiper-slide {
+            width: 20%;
+            height: 100%;
+            opacity: 0.4;
+        }
+        .swiper-slide-thumb-active {
+            opacity: 1;
+        }
+    }
+    &__text {
+        padding-left: 50px;
+    }
+    &__value {
+        margin-bottom: 15px;
+        font-weight: 600;
+        @include adaptiv-font(24, 16);
+        line-height: 29px;
+        span {
+            color: rgba(255, 255, 255, 0.7);
+        }
+    }
+    &__descr {
+        margin-top: 60px;
+    }
+    .quote {
+        margin-top: 35px;
+        font-weight: 400;
+        @include adaptiv-font(18, 14);
+        line-height: 21px;
+        display: flex;
+        justify-content: space-between;
+        width: 100%;
+        background-color: #1D1D1D;
+        padding: 20px 30px;
+        &__profile {
+            margin-right: 40px;
+            img {
+                width: 90%;
+                margin: 0 auto;
+            }
+        }
+        &__name {
+            white-space: nowrap;
+        }
+        &__date {
+            margin-top: 20px;
+        }
+    }
+    .advantages, .disadvantages {
+        font-weight: 600;
+        line-height: 29px;
+        &__title {
+            @include adaptiv-font(24, 18);
+        }
+        &__list {
+            @include adaptiv-font(22, 16);
+            font-weight: 400;
+            li {
+                margin-top: 15px;
+                list-style-type: "- ";
+                margin-left: 15px;
+            }
+        }
+    }
+}
+
+@media (max-width: 992px) {
+    .info {
+        &__wrapper {
+            grid-template-columns: 100%;
+            row-gap: 50px;
+        }
+        &__text {
+            padding: 0 50px;
+        }
+    }
+}
+
+@media (max-width: 576px) {
+    .info {
+        overflow-x: hidden;
+        padding: 70px 0;
+        &__arrows {
+            display: flex;
+            justify-content: flex-end;
+        }
+        .swiper {
+            width: 100%;
+        }
+        .mySwiper {
+            margin-top: 40px;
+
+        }
+        &__text {
+            padding: 0;
+        }
+        .quote {
+            flex-direction: column;
+            align-items: center;
+            &__profile {
+                margin: 0;
+            }
+        }
+        .arrow {
+            position: relative;
+            padding: 0 10px;
+        }
+        .slider {
+            &__wrapper {
+                overflow: visible;
+            }
+        }
+    }
+}
